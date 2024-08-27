@@ -7,7 +7,7 @@ import {Link} from 'expo-router'
 import {images} from '../../constants'
 import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
-const SingIn = () => {
+const SingUp = () => {
   const [isSubmitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     email: '',
@@ -30,6 +30,13 @@ const SingIn = () => {
           />
           <Text className="text-2xl text-white text-semibold mt-10 font-psemibold">Log in to DeezNutz</Text>
           <FormField
+          title="Username"
+          value={form.username}
+          handleChangeText={(e) => setForm ({...form,username: e})}
+          otherStyles="mt-7"
+         
+          />
+          <FormField
           title="Email"
           value={form.email}
           handleChangeText={(e) => setForm ({...form,email: e})}
@@ -45,20 +52,20 @@ const SingIn = () => {
           />
 
            <CustomButton
-            title="Sign In"
+            title="Register"
             handlePress={submit}
             containerStyles="mt-7"
             isLoading={isSubmitting}
           />
             <View className="flex justify-center pt-4 flex-row gap-2">
             <Text className="text-l text-gray-100 font-pregular">
-              Don't have an account?
+              Have an account already?
             </Text>
             <Link
-              href="/sign-up"
+              href="/sign-in"
               className="text-l font-psemibold text-secondary"
             >
-              Signup
+              Sign in
             </Link>
           </View>
         </View>
@@ -67,4 +74,4 @@ const SingIn = () => {
   )
 }
 
-export default SingIn
+export default SingUp

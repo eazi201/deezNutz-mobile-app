@@ -1,7 +1,7 @@
 import { View, Text,ScrollView ,Image} from 'react-native'
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
-import { Link } from 'expo-router'
+import { Link, router } from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 
