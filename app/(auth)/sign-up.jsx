@@ -7,19 +7,20 @@ import {Link} from 'expo-router'
 import {images} from '../../constants'
 import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
+import { createUser } from '../../lib/appwrite';
 const SingUp = () => {
-  const [isSubmitting, setSubmitting] = useState(false);
+  
   const [form, setForm] = useState({
+    username:'',
     email: '',
     password:'',
   });
-
-  const submit = async () => {
-    if (form.email === "" || form.password === "") {
-      Alert.alert("Error", "Please fill in all fields");
-    }
-    setSubmitting(true);
-  };
+  const [isSubmitting, setSubmitting] = useState(false);
+  const submit = () =>{
+    createUser();
+  }
+  
+  
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView>

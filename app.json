@@ -18,9 +18,9 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff",
-        "package":"com.deez.kali"
-      }
+        "backgroundColor": "#ffffff"
+        },
+       "package":"com.deez.deezApp"
     },
     "web": {
       "bundler": "metro",
